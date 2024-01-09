@@ -1,5 +1,10 @@
-// import { app } from './src/app.js';
-import mongoose from "mongoose";
 import { connectDB } from './src/db/index.js';
+await connectDB();
 
-let db = connectDB;
+import { app } from './src/routes/index.js';
+
+
+
+app.listen(8080, () => {
+    console.log("server is listening to port 8080");
+  });
